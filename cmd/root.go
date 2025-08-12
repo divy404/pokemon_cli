@@ -7,17 +7,18 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-    Use:   "zero",
-    Short: "zero is a cli tool for performing basic mathematical operations",
-    Long:  "zero is a cli tool for performing basic mathematical operations - addition, multiplication, division and subtraction.",
-    Run: func(cmd *cobra.Command, args []string) {
+    Use:   "pokecli",
+    Short: "A CLI tool to explore Pokemon from PokeAPI",
+    Long:  "pokecli lets you fetch and explore Pokemon data from PokeAPI using the terminal.",
 
-    },
 }
 
 func Execute() {
     if err := rootCmd.Execute(); err != nil {
-        fmt.Fprintf(os.Stderr, "Oops. An error while executing Zero '%s'\n", err)
+        fmt.Fprintf(os.Stderr, "Oops. An error while executing:'%s'\n", err)
         os.Exit(1)
     }
+}
+func init() {
+    
 }
