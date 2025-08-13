@@ -3,7 +3,7 @@ package api
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"strings"
 )
@@ -35,7 +35,7 @@ func FetchPokemon(nameOrID string) (*Pokemon, error) {
 	if resp.StatusCode != http.StatusOK{
 		return nil, fmt.Errorf("pokemon not found or API error: %s (status %d)",nameOrID, resp.StatusCode)
 	}
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
 	}
