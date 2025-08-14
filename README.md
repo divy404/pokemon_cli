@@ -1,4 +1,4 @@
-# Pokémon CLI (pokecli)
+# Pokémon CLI - pokecli
 
 A simple and interactive **Command Line Interface** tool written in Go that fetches Pokémon information from the [PokeAPI](https://pokeapi.co/).  
 Built using the **Cobra** library for structured CLI commands.
